@@ -31,13 +31,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "accounts",
+    
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    #Local apps
+    "pages",
+    "accounts",
+    #3rd party apps
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
@@ -121,3 +128,6 @@ STATIC_URL = "static/"
 
 LOGIN_REDIRECT_URL = "home"    
 LOGOUT_REDIRECT_URL = "home"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
