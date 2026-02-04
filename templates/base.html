@@ -40,6 +40,9 @@
 
         <!-- Right-aligned items (auth-dependent) -->
         {% if user.is_authenticated %}
+        <li>
+        <a href="{% url 'article_new' %}" class="nav-link px-2 link-dark">New Article</a>
+        </li>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button"

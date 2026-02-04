@@ -42,10 +42,13 @@ INSTALLED_APPS = [
     #Local apps
     "pages",
     "accounts",
+    "articles",
     #3rd party apps
     "crispy_forms",
     "crispy_bootstrap5",
 ]
+
+TIME_ZONE = "Africa/Nairobi"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
