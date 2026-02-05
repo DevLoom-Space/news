@@ -7,8 +7,11 @@
    </div>
 
    <div>
-   <p><a href="{% url 'article_edit' article.pk %}">Edit</a></p>
-   <p><a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+
+   {% if article.author.pk == request.user.pk %}
+   <p><a href="{% url 'article_edit' object.pk %}">Edit</a></p>
+   <p><a href="{% url 'article_delete' object.pk %}">Delete</a></p>
+   {% endif %}
    <p> Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
 
 </div>
